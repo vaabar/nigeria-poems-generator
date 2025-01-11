@@ -10,12 +10,11 @@ form {
   display: flex;
 }
 .form-container {
-  padding: 15px 20px;
   background-color: white;
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
-  display: flex;
   margin-bottom: 30px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  padding: 15px 20px;
 }
 header {
   margin-bottom: 30px;
@@ -25,7 +24,7 @@ h1 {
   font-weight: 800;
   font-size: 36px;
   line-height: 1.5;
-  display: flex;
+  color: #272044;
 }
 .instruction {
   padding: 16px;
