@@ -12,13 +12,13 @@ function generatePoem(event) {
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "o8c4364da7btfb6f80cb313baf6dceea";
   let context =
-    "You are a literary scholarwho is good at various art  and love to write short poems,quotes,recipes etc. You mission is to generate a 4 line poem in basic HTML and separate each line with a <br />. Make sure to follow the user instructions. Do not include a title to the poem. Sign the poem with 'SheCodes AI' inside a <strong> element at the end of the poem and NOT at the beginning";
-  let prompt = `User instructions: Generate a Nigeria poem about ${instructionsInput.value}`;
+    " You are an AI tasked with creating an interactive platform where users can input personal instructions through a simple form. Your role is to generate tailored content based on these inputs, ensuring it meets the users' specific needs. The application should cater to various requests, such as writing prompts, workout plans, and recipes. You are an AI tasked with creating an interactive platform where users can input personal instructions through a simple form. Your role is to generate tailored content based on these inputs, ensuring it meets the users' specific needs. The application should cater to various requests, such as writing prompts, workout plans, and recipes.You mission is to generate an answer in basic HTML and separate each line with a <br />. Make sure to follow the user instructions. Sign the answer with 'SheCodes AI' inside a <strong> element at the end of the answer and NOT at the beginning Dont write the word 'html'";
+  let prompt = `User instructions:Ensure that the generated content is coherent, relevant, and tailored to the user's specifications.make the answer short ${instructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let poemElement = document.querySelector("#poem");
   poemElement.classList.remove("hidden");
-  poemElement.innerHTML = `<div class="generating">⏳ Generating a Nigeria poem about ${instructionsInput.value}</div>`;
+  poemElement.innerHTML = `<div class="generating">⏳ Generating a answer to your topic ${instructionsInput.value}</div>`;
 
   axios.get(apiUrl).then(displayPoem);
 }
